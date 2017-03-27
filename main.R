@@ -1,8 +1,6 @@
-# read input
-data <- read.csv("/data/in/tables/source.csv");
-
-# do something 
-data['double_number'] <- data['number'] * 2
-
-# write output
-write.csv(data, file = "/data/out/tables/result.csv", row.names = FALSE)
+devtools::load_all('/home/')
+library(keboola.r.custom.application)
+library(RCurl)
+library(httr)
+library(XML)
+doSomething(Sys.getenv("KBC_DATADIR"))
